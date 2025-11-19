@@ -2,13 +2,10 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<h1>Configuring Group Policy inside Active Directory (Azure)</h1>
+This demonsration outlines configuring Group Policy Objects within Active Directory <br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -19,15 +16,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Windows Server 2025
+- Windows 11 (21H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Log into Domain Controller VM
+- Navigating to Account Lockout Settings
+- Attempt to log into client VM repeatedly with the wrong password
+- Monitor and observe changes and implementation
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -64,8 +61,8 @@ Then, inside the command prompt, I typed the command, gpupdate /force. This ensu
 <br />
 
 <p>
-<img width="861" height="484" alt="image" src="https://github.com/user-attachments/assets/e8cc4aa3-1a28-4508-9168-d74d432d9f8a" />
-<img width="954" height="479" alt="image" src="https://github.com/user-attachments/assets/944bc8be-55e8-4128-a36c-cf22a2fd4547" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/e8cc4aa3-1a28-4508-9168-d74d432d9f8a" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/944bc8be-55e8-4128-a36c-cf22a2fd4547" />
 
 </p>
 <p>
@@ -77,7 +74,7 @@ Then I switched to my client-1 VM and logged in as fac.new, the client account I
 
 
 <p>
-<img width="1015" height="650" alt="image" src="https://github.com/user-attachments/assets/a69a7759-8d42-4bfb-abd8-6abba44fc42c" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/a69a7759-8d42-4bfb-abd8-6abba44fc42c" />
 </p>
 <p>
 Next, inside my domain controller, I searched for the user, went into properties account then unlocked the account for our user to log in.
@@ -87,7 +84,7 @@ Next, inside my domain controller, I searched for the user, went into properties
 <br />
 
 <p>
-<img width="1002" height="551" alt="image" src="https://github.com/user-attachments/assets/b83dd0b8-b3b1-43d8-b176-bf090549772f" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/b83dd0b8-b3b1-43d8-b176-bf090549772f" />
 </p>
 <p>
 If we want to change his account password, I right-click on his account and click edit password.
@@ -97,53 +94,24 @@ If we want to change his account password, I right-click on his account and clic
 <br />
 
 <p>
-<img width="860" height="629" alt="image" src="https://github.com/user-attachments/assets/3fa3a253-8419-411e-9f46-accb83193b8d" />
-  <img width="960" height="486" alt="image" src="https://github.com/user-attachments/assets/dd77b9e4-5bef-4fc4-a62b-44ed88e426d3" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/3fa3a253-8419-411e-9f46-accb83193b8d" />
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/dd77b9e4-5bef-4fc4-a62b-44ed88e426d3" />
 </p>
 <p>
-If I need to disable a client's account for security purposes, I will right-click their account inside Active Directory and click disable account.
+If I need to disable a client's account for security purposes, I will right-click their account inside Active Directory and click disable account. Disabling accounts is recommended on unused accounts such as employees on extended leave (maternity leave, medical leave, sabbaticals) or if an account shows signs of compromise. This adds an extra layer of security without having to delete the entire account.
 </p>
 <br />
 </p>
 <br />
 
 <p>
-<img width="1579" height="868" alt="image" src="https://github.com/user-attachments/assets/5309a4da-0df8-4e53-985e-408f554eebf8" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/5309a4da-0df8-4e53-985e-408f554eebf8" />
 </p>
 <p>
-Here, we could look in the event viewer security logs and see users that logged in. For our case, fac.new failed to log before being locked out so we could see that
+Here, we could look in the event viewer security logs and see users that logged in. For our case, fac.new failed to log before being locked out so we could see that.
 </p>
 <br />
 </p>
 <br />
 
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-</p>
-<br />
