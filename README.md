@@ -3,7 +3,8 @@
 </p>
 
 <h1>Configuring Group Policy inside Active Directory (Azure)</h1>
-This demonsration outlines configuring Group Policy Objects within Active Directory <br />
+This demonsration outlines configuring Group Policy Objects within Active Directory. <p></p>
+A Group Policy Object(GPO) is a centralized management feature in Windows networks that allows administrators to define and enforce specific configurations, security settings, and behaviors for users and computers within an Active Directory (AD) domain<br />
 
 
 
@@ -114,4 +115,5 @@ Here, we could look in the event viewer security logs and see users that logged 
 </p>
 <br />
 
-
+In the next section of the lab, I will configure DNS in a Windows Server environment, testing name resolution and DNS caching issue.
+https://github.com/DannySom/DNS-configuration
