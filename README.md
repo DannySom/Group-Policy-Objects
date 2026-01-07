@@ -43,11 +43,12 @@ Here we located the default domain policy in Active Directory. To reach this, I 
 <p>
 Next, I navigated to Account Lockout Policy. To reach this in the Group Policy Management Editor, I expand the following tree:
 Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy. <p> 
-  Then I configured the Account lockout policies: 
-  </p> **Account Lockout Duration: 30 minutes** (This setting specifies that when an account is locked out due to multiple failed login attempts, it will remain locked for 30 minutes. This helps to allow legitimate users regain access after a reasonable amount of time and also helps prevent malicious logon attempts) 
-  </p> **Account Lockout Threshold: 5 Invalid Logon Attempts** (This setting is set to 5 because if an attacker attempts to guess passwords, they will be blocked after 5 failed attempt. At the same time, this threshold is set high enough to minimize disruptions for users who might occasionally mistype their password.)
-  </p> **Allow Administrator Account Lockout: Enabled** (This setting ensures that even administrative accounts are subject to the account lockout policy. This adds an extra layer of security to priviledged accounts)
-  </p> **Reset Account Lockout Counter After: 10 Minutes** (If no further failed login attempts are made within 10 minutes, the counter for failed attempts resets to zero.)
+  <ins>Then I configured the Account lockout policies: </ins>
+  
+   - **Account Lockout Duration: 30 minutes** (This setting specifies that when an account is locked out due to multiple failed login attempts, it will remain locked for 30 minutes. This helps to allow legitimate users regain access after a reasonable amount of time and also helps prevent malicious logon attempts) 
+   - **Account Lockout Threshold: 5 Invalid Logon Attempts** (This setting is set to 5 because if an attacker attempts to guess passwords, they will be blocked after 5 failed attempt. At the same time, this threshold is set high enough to minimize disruptions for users who might occasionally mistype their password.)
+   - **Allow Administrator Account Lockout: Enabled** (This setting ensures that even administrative accounts are subject to the account lockout policy. This adds an extra layer of security to priviledged accounts)
+   - **Reset Account Lockout Counter After: 10 Minutes** (If no further failed login attempts are made within 10 minutes, the counter for failed attempts resets to zero.)
 </p>
 <br />
 
